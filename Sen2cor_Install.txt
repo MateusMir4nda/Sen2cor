@@ -1,0 +1,42 @@
+--------------------------------------------------------
+### Roteiro para instalção do Sen2cor ###
+
+*Você pode substituir $USER pelo seu usuário
+
+1° Parte: baixar e instalar Anaconda
+
+	1. https://repo.continuum.io/archive/
+		baixe Anaconda3-2020.02-Linux-x86_64.sh
+
+	2. Abra o terminal
+
+	3. cd /home/$USER/Downloads
+
+	4. bash Anaconda3-2020.02-Linux-x86_64.sh
+		enter até yes
+
+	5. which conda
+		para saber se foi instalado
+		ele vai instalar na pasta -> /home/mt/anaconda3 (mt é o nome do meu usuário...o seu vai ser diferente)
+
+2° Parte: baixar e instalar o Sen2cor
+
+	6. http://step.esa.int/main/third-party-plugins-2/sen2cor/
+		baixe o sen2cor
+
+	7. bash ./Sen2Cor-02.08.00-Linux64.run --target /home/$USER/Documentos/sen2cor208
+
+	8. cd /home/$USER/Documentos/sen2cor208
+		ls para ver os arquivos dentro da pasta
+
+	9. bash bin/L2A_Process --help
+
+-----------------------
+
+### Para Processar a imagem Sentinel2 ###
+
+bash bin/L2A_Process  [localização completa da pasta .SAFE]
+
+o meu ficou assim, ex: 
+
+bash bin/L2A_Process /home/mt/Documentos/S2A_MSIL1C_20190926T130251_N0208_R095_T24MVV_20190926T143642.SAFE
